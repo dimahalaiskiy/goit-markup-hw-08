@@ -1,0 +1,15 @@
+.is-current {
+    color: var(--focus-color);
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 4px;
+        border-radius: 2px;
+        width: 100%;
+        background-color: var(--focus-color);
+        bottom: -32px;
+    } 
+}
+
+

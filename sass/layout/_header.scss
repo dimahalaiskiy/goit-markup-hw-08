@@ -1,0 +1,66 @@
+.header-menu {
+    background-color: #FFFFFF;
+}
+
+.header-menu__container {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header__logo {
+    margin-right: 95px;
+}
+
+.social-links__list {
+    display: flex;
+}
+
+.social-links__item {
+    display: flex;
+    position: relative;
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.social-links__link {
+    @include font(14px, 500, 16px);
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, 
+    &:focus,
+    .is-current {
+        color: var(--focus-color);
+    } 
+}
+
+.social-contakt-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.social-contakt-list__item:not(:first-child) {
+    margin-left: 50px;
+}
+
+.social-contakt-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font(14px, 500, 16px);
+    letter-spacing: 0.02em;
+    color: var(--paragraph-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, 
+    &:focus { 
+    color: var(--focus-color);
+    }
+}
+
+.social-contakt-list__icon { 
+    margin-right: 10px;
+    fill: currentColor;
+}
