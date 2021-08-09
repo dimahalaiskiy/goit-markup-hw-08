@@ -4,63 +4,257 @@
 
 .header-menu__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
-.header__logo {
-    margin-right: 95px;
-}
-
-.social-links__list {
-    display: flex;
-}
-
-.social-links__item {
-    display: flex;
-    position: relative;
-    &:not(:last-child) {
-        margin-right: 50px;
-    }
-}
-
-.social-links__link {
-    @include font(14px, 500, 16px);
-    letter-spacing: 0.02em;
-    color: var(--main-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover, 
-    &:focus,
-    .is-current {
-        color: var(--focus-color);
-    } 
+.social-links {
+    display: none;
 }
 
 .social-contakt-list {
-    display: flex;
-    margin-left: auto;
+    display: none;
 }
 
-.social-contakt-list__item:not(:first-child) {
-    margin-left: 50px;
+.burger-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
 }
 
-.social-contakt-list__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include font(14px, 500, 16px);
-    letter-spacing: 0.02em;
-    color: var(--paragraph-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover, 
-    &:focus { 
-    color: var(--focus-color);
+.burger-btn__svg {
+    width: 40px;
+    height: 40px;
+    &:hover,
+    &:focus {
+        fill: var(--focus-color);
     }
 }
 
-.social-contakt-list__icon { 
-    margin-right: 10px;
-    fill: currentColor;
+.mobile-menu {
+    position: fixed;
+    overflow-y:scroll;
+    z-index: 5;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.mobile-menu__container {
+    position: relative;
+}
+.mobile-menu__close-button {
+    position: absolute;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+}
+
+.mobile-menu__svg {
+    width: 20px;
+    height: 20px;
+}
+.nav-mobile-container {
+    padding: 48px 25px;
+}
+
+.nav-mobile__link {
+    font-family: Roboto;
+    @include font (40px, 500, 47px);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--main-color);
+
+    &:hover,
+    &:focus {
+        color: var(--focus-color);
+    }
+}
+
+.nav-mobile-tel {
+    display: block;
+    margin-top: auto;
+    color: var(--focus-color);
+}
+
+.nav-mobile-mail {
+    display: block;
+    margin-top: 32px;
+    font-family: Roboto;
+    @include font (24px, 500, 28px);
+    color: var(--paragraph-color);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.mobile-menu-social {
+    padding-top: 64px;
+    display: flex;
+}
+
+.mobile-menu-social__link {
+    text-decoration: none;
+    font-family: Roboto;
+    @include font (18px, 500, 22px);
+    letter-spacing: 0.02em;
+    color: var(--focus-color);
+}
+
+.nav-mobile__position {
+    margin-top: 80%;
+}
+
+.mobile-menu-social__item:not(:first-child){
+    padding-left: 10px;
+}
+
+.mobile-menu-social__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .nav-mobile__link {
+        @include font (35px, 500, 41px);
+    }
+
+    .nav-mobile-mail {
+        @include font (21px, 500, 23px);
+    }
+
+    .mobile-menu-social {
+        display: block;
+    }
+
+    .mobile-menu-social__item:not(:last-child) {
+        border: none;
+        padding: 0;
+    }
+
+    .mobile-menu-social__item:not(:first-child) {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .burger-btn {
+        display: none;
+    }
+
+    .social-links {
+        display: flex;
+        margin-right: 63px;
+    }
+    
+    .social-contakt-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        margin-top: -10px;
+    }
+
+    .social-contakt-list__item {
+        margin-top: 10px;
+    }
+
+    .header__logo {
+        margin-right: 88px;
+    }
+    
+    .social-links__list {
+        display: flex;
+    }
+    
+    .social-links__item {
+        display: flex;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+    
+    .social-links__link {
+        @include font(14px, 500, 16px);
+        letter-spacing: 0.02em;
+        color: var(--main-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover, 
+        &:focus,
+        .is-current {
+            color: var(--focus-color);
+        } 
+    }
+    
+    .social-contakt-list__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font(14px, 500, 16px);
+        letter-spacing: 0.02em;
+        color: var(--paragraph-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover, 
+        &:focus { 
+        color: var(--focus-color);
+        }
+    }
+    
+    .social-contakt-list__icon { 
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .social-contakt-list {
+        flex-direction: row;
+        margin-left: auto;
+    }
+    .header-menu__container {
+        justify-content: flex-start;
+        padding-top: 26px;
+        padding-bottom: 25px;
+    }
+    .social-contakt-list__item:not(:first-child) {
+        margin-left: 50px;
+    }
+    .social-links {
+        margin-right: 93px;
+    }
+
+    .social-contakt-list {
+        margin-top: 0;
+    }
+
+    .social-contakt-list__item {
+        margin-top: 0;
+    }
 }

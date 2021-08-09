@@ -41,8 +41,57 @@
                     </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+            <button data-menu-open type="button" class="burger-btn">
+                <svg class="burger-btn__svg">
+                    <use href="./img/icons.svg#burger-menu-icon"></use>
+                </svg>
+            </button>
         </div>
-        </header>  
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+            <button type="button" class="close-button mobile-menu__close-button" data-menu-close>
+                <svg class="mobile-menu__svg">
+                    <use href="./img/icons.svg#icon-backdrop-quit"></use>
+                </svg>
+            </button>
+            <div class="nav-mobile-container">
+            <ul class="nav-mobile list">
+                <li class="nav-mobile__item">
+                    <a  class="nav-mobile__link" href="./index.html">Студия</a>
+                </li>
+                <li class="nav-mobile__item">
+                    <a  class="nav-mobile__link is-current-mobile" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav-mobile__item">
+                    <a  class="nav-mobile__link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="nav-mobile__position">
+            <a class="nav-mobile__link nav-mobile-tel" href="tel:+380961111111">+380961111111</a>
+            <a class="nav-mobile-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <ul class="mobile-menu-social list">
+                <li class="mobile-menu-social__item">
+                    <a class="mobile-menu-social__link" 
+                    href="#">Instagram</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a class="mobile-menu-social__link" 
+                    href="#">Twitter</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a class="mobile-menu-social__link" 
+                    href="#">Facebook</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a class="mobile-menu-social__link" 
+                    href="#">LinkedIn</a>
+                </li>
+            </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+        </header>     
     <main class="header__border">
         <!-- BUTTONS CATALOG-->
         <section class="portfolio-nav">
@@ -74,7 +123,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img.webp 1x, ./img/portfolio/desktop/img@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img.jpg 1x, ./img/portfolio/desktop/img@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img.webp 1x, ./img/portfolio/tablet/img@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img.jpg 1x, ./img/portfolio/tablet/img@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img.webp 1x, ./img/portfolio/mobile/img@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img.jpg 1x, ./img/portfolio/mobile/img@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -90,7 +153,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-1.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-1.webp 1x, ./img/portfolio/desktop/img-1@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-1.jpg 1x, ./img/portfolio/desktop/img-1@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-1.webp 1x, ./img/portfolio/tablet/img-1@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-1.jpg 1x, ./img/portfolio/tablet/img-1@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-1.webp 1x, ./img/portfolio/mobile/img-1@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-1.jpg 1x, ./img/portfolio/mobile/img-1@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -106,7 +183,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-2.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-2.webp 1x, ./img/portfolio/desktop/img-2@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-2.jpg 1x, ./img/portfolio/desktop/img-2@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-2.webp 1x, ./img/portfolio/tablet/img-2@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-2.jpg 1x, ./img/portfolio/tablet/img-2@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-2.webp 1x, ./img/portfolio/mobile/img-2@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-2.jpg 1x, ./img/portfolio/mobile/img-2@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -122,7 +213,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-3.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-3.webp 1x, ./img/portfolio/desktop/img-3@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-3.jpg 1x, ./img/portfolio/desktop/img-3@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-3.webp 1x, ./img/portfolio/tablet/img-3@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-3.jpg 1x, ./img/portfolio/tablet/img-3@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-3.webp 1x, ./img/portfolio/mobile/img-3@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-3.jpg 1x, ./img/portfolio/mobile/img-3@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -138,7 +243,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-4.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-4.webp 1x, ./img/portfolio/desktop/img-4@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-4.jpg 1x, ./img/portfolio/desktop/img-4@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-4.webp 1x, ./img/portfolio/tablet/img-4@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-4.jpg 1x, ./img/portfolio/tablet/img-4@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-4.webp 1x, ./img/portfolio/mobile/img-4@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-4.jpg 1x, ./img/portfolio/mobile/img-4@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -154,7 +273,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-5.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-5.webp 1x, ./img/portfolio/desktop/img-5@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-5.jpg 1x, ./img/portfolio/desktop/img-5@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-5.webp 1x, ./img/portfolio/tablet/img-5@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-5.jpg 1x, ./img/portfolio/tablet/img-5@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-5.webp 1x, ./img/portfolio/mobile/img-5@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-5.jpg 1x, ./img/portfolio/mobile/img-5@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -170,7 +303,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-6.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-6.webp 1x, ./img/portfolio/desktop/img-6@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-6.jpg 1x, ./img/portfolio/desktop/img-6@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-6.webp 1x, ./img/portfolio/tablet/img-6@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-6.jpg 1x, ./img/portfolio/tablet/img-6@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-6.webp 1x, ./img/portfolio/mobile/img-6@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-6.jpg 1x, ./img/portfolio/mobile/img-6@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -186,7 +333,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-7.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-7.webp 1x, ./img/portfolio/desktop/img-7@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-7.jpg 1x, ./img/portfolio/desktop/img-7@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-7.webp 1x, ./img/portfolio/tablet/img-7@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-7.jpg 1x, ./img/portfolio/tablet/img-7@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-7.webp 1x, ./img/portfolio9mobile/img-7@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-7.jpg 1x, ./img/portfolio/mobile/img-7@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -202,7 +363,21 @@
                     <a href="#" class="catalog-list__link">
                     <figure class="catalog-list__border">
                         <div class="overlay-catalog-img-position">
-                            <img class= "catalog-list__border-img" src="img/portfolio/img-8.jpg" alt="Ноутбук с макетом сайта" width="370" height="294">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-8.webp 1x, ./img/portfolio/desktop/img-8@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 1200px)"
+                                srcset="./img/portfolio/desktop/img-8.jpg 1x, ./img/portfolio/desktop/img-8@2x.jpg 2x">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-8.webp 1x, ./img/portfolio/tablet/img-8@2x.webp 2x" type="image/webp">
+                                <source media="(min-width: 768px)"
+                                srcset="./img/portfolio/tablet/img-8.jpg 1x, ./img/portfolio/tablet/img-8@2x.jpg 2x">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-8.webp 1x, ./img/portfolio/mobile/img-8@2x.webp 2x" type="image/webp">
+                                <source 
+                                srcset="./img/portfolio/mobile/img-8.jpg 1x, ./img/portfolio/mobile/img-8@2x.jpg 2x">
+                                <img class= "catalog-list__border-img" src="#" alt="Ноутбук с макетом сайта">
+                            </picture>
                             <p class="catalog-list__overlay">
                                 Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                             </p>
@@ -288,5 +463,6 @@
         </ul>
         </div>
     </footer>
+    <script src="js/menu.js"></script>
 </body>
 </html>

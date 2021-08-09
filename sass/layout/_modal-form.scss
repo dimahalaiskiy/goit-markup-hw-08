@@ -6,7 +6,7 @@
 
 .modal-form__heading {
     margin-bottom: 12px;
-    @include font(20px, 700, 23px);
+    @include font(20px, 700, 30px);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-color);
@@ -88,11 +88,10 @@
 
 .modal-form__checkbox-label {
     display: flex;
-    padding-left: 13px;
     margin-bottom: 30px;
     align-items: center;
     padding-top: 20px;
-    @include font(14px, 400, 24px);
+    @include font(12px, 400, 14px);
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
     &::before {
@@ -118,4 +117,21 @@
 
 .modal-form__btn {
     margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+    .modal-form__checkbox-label {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .modal-form__checkbox-label {
+        @include font (14px, 400, 24px);
+        padding-left: 13px;
+    }
+
+    .modal-form__heading {
+        @include font(20px, 700, 23px);
+    }
 }

@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Шапка сайта (навигация) -->
-    <!-- <header class="header-menu">
+    <header class="header-menu">
     <div class="container header-menu__container">
         <a class="logo header__logo" href="./index.html"><span class="logo__theme-blue">Web</span>Studio</a>
         <nav class="social-links">
@@ -41,8 +41,57 @@
                 </svg>+38 096 111 11 11</a>
             </li>
         </ul>
+        <button data-menu-open type="button" class="burger-btn">
+            <svg class="burger-btn__svg">
+                <use href="./img/icons.svg#burger-menu-icon"></use>
+            </svg>
+        </button>
     </div>
-    </header>   -->
+    <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+        <button type="button" class="close-button mobile-menu__close-button" data-menu-close>
+            <svg class="mobile-menu__svg">
+                <use href="./img/icons.svg#icon-backdrop-quit"></use>
+            </svg>
+        </button>
+        <div class="nav-mobile-container">
+        <ul class="nav-mobile list">
+            <li class="nav-mobile__item">
+                <a  class="nav-mobile__link is-current-mobile" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-mobile__item">
+                <a  class="nav-mobile__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-mobile__item">
+                <a  class="nav-mobile__link" href="#">Контакты</a>
+            </li>
+        </ul>
+        <div class="nav-mobile__position">
+        <a class="nav-mobile__link nav-mobile-tel" href="tel:+380961111111">+380961111111</a>
+        <a class="nav-mobile-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <ul class="mobile-menu-social list">
+            <li class="mobile-menu-social__item">
+                <a class="mobile-menu-social__link" 
+                href="#">Instagram</a>
+            </li>
+            <li class="mobile-menu-social__item">
+                <a class="mobile-menu-social__link" 
+                href="#">Twitter</a>
+            </li>
+            <li class="mobile-menu-social__item">
+                <a class="mobile-menu-social__link" 
+                href="#">Facebook</a>
+            </li>
+            <li class="mobile-menu-social__item">
+                <a class="mobile-menu-social__link" 
+                href="#">LinkedIn</a>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+    </header>  
     <main>
         <!-- Первый блок HERO -->
         <section class="container-hero">
@@ -50,9 +99,9 @@
             <h1 class="container-hero__hero-heading">Эффективные решения для вашего бизнеса</h1>
             <button class="btn-style container-hero__hero-bottom" type="button" data-modal-open>Заказать услугу</button>
         </div>
-        </section>
-        <!-- Второй блок "Чем мы занимаемся? "OUR BENEFITS-->
-        <!-- <section class="benefits"> 
+        </section> 
+        <!-- Второй блок "Чем мы занимаемся? "OUR BENEFITS -->
+        <section class="benefits"> 
             <div class="container">
             <ul class="benefits-list">
                 <li class="benefits-list__item list">
@@ -96,41 +145,45 @@
             <ul class="benefits-img-list">
                 <li class="benefits-img-list__item list">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="./img/benefits/benefits-1.jpg 1x, ./img/benefits/benefits-1-2x.jpg 2x">
+                    <source media="(min-width:1200px)" 
+                    srcset="./img/benefits/benefits-1.jpg 1x, ./img/benefits/benefits-1-2x.jpg 2x">
                     <img class="benefits-img-list__position" src="#" alt="Работа с телефоном" width="370" height="294">
                 </picture>
                 <p class="benefits-img-list__overlay">Десктопные приложения</p>
                 </li>
                 <li class="benefits-img-list__item list">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="./img/benefits/benefits-2.jpg 1x, ./img/benefits/benefits-2-2x.jpg 2x">
+                    <source media="(min-width:1200px)" 
+                    srcset="./img/benefits/benefits-2.jpg 1x, ./img/benefits/benefits-2-2x.jpg 2x">
                     <img class="benefits-img-list__position" src="#" alt="Работа с телефоном" width="370" height="294">
                 </picture>
                 <p class="benefits-img-list__overlay">Мобильные приложения</p>
                 </li>
                 <li class="benefits-img-list__item list">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="./img/benefits/benefits-3.jpg 1x, ./img/benefits/benefits-3-2x.jpg 2x">
+                    <source media="(min-width:1200px)" 
+                    srcset="./img/benefits/benefits-3.jpg 1x, ./img/benefits/benefits-3-2x.jpg 2x">
                     <img class="benefits-img-list__position" src="#" alt="Работа с телефоном" width="370" height="294">
                 </picture>
                 <p class="benefits-img-list__overlay">Дизайнерские решения</p>
                 </li>
             </ul>
-            </div> -->
-        <!-- </section> -->
-        <!-- Третий блок "Наша команда"  OUR TEAM-->
+            </div>
+        </section>   
+        <!-- Третий блок "Наша команда"  OUR TEAM -->
         <section class="stuff">
             <div class="container">
             <h2 class="heading stuff__heading">Наша команда</h2>
             <ul class="stuff-list">
                 <li class="stuff-list__item list">
-                    <figure class="stuff-list__border">
+                    <div class="stuff-list__border">
                     <picture>
                         <source media="(min-width: 1200px)" 
                         srcset="./img/team/stuff-1-desktop1x.jpg 1x, ./img/team/stuff-1-desktop2x.jpg 2x">
                         <source media="(min-width: 768px)" 
                         srcset="./img/team/stuff-1-laptop1x.jpg 1x, ./img/team/stuff-1-laptop2x.jpg 2x">
-                        <source srcset="./img/team/stuff-1-1x.jpg 1x, ./img/team/stuff-1-2x.jpg 2x">
+                        <source media="(max-width: 767px)"
+                        srcset="./img/team/stuff-1-1x.jpg 1x, ./img/team/stuff-1-2x.jpg 2x">
                     <img class="stuff-list__img" src="#" alt="Человек">
                     </picture>
                     <h4 class="stuff-list__heading">Игорь Демяненко</h4>
@@ -165,7 +218,7 @@
                             </a>
                         </li>
                     </ul>
-                    </figure>
+                    </div>
                 </li>
                 <li class="stuff-list__item list">
                     <figure class="stuff-list__border">
@@ -174,7 +227,8 @@
                             srcset="./img/team/stuff-2-desktop1x.jpg 1x, ./img/team/stuff-2-desktop2x.jpg 2x">
                         <source media="(min-width: 768px)" 
                             srcset="./img/team/stuff-2-laptop1x.jpg 1x, ./img/team/stuff-2-laptop2x.jpg 2x">
-                        <source srcset="./img/team/stuff-2-1x.jpg 1x, ./img/team/stuff-2-2x.jpg 2x">
+                        <source media="(max-width: 767px)"
+                            srcset="./img/team/stuff-2-1x.jpg 1x, ./img/team/stuff-2-2x.jpg 2x">
                         <img class="stuff-list__img" src="#" alt="Человек">
                     </picture>
                     <h4 class="stuff-list__heading">Ольга Репина</h4>
@@ -218,7 +272,8 @@
                             srcset="./img/team/stuff-3-desktop1x.jpg 1x, ./img/team/stuff-3-desktop2x.jpg 2x">
                         <source media="(min-width: 768px)" 
                             srcset="./img/team/stuff-3-laptop1x.jpg 1x, ./img/team/stuff-3-laptop2x.jpg 2x">
-                        <source srcset="./img/team/stuff-3-1x.jpg 1x, ./img/team/stuff-3-2x.jpg 2x">
+                        <source media="(max-width: 767px)"
+                            srcset="./img/team/stuff-3-1x.jpg 1x, ./img/team/stuff-3-2x.jpg 2x">
                         <img class="stuff-list__img" src="#" alt="Человек">
                     </picture>
                     <h4 class="stuff-list__heading">Николай Тарасов</h4>
@@ -262,7 +317,8 @@
                             srcset="./img/team/stuff-4-desktop1x.jpg 1x, ./img/team/stuff-4-desktop2x.jpg 2x">
                         <source media="(min-width: 768px)" 
                             srcset="./img/team/stuff-4-laptop1x.jpg 1x, ./img/team/stuff-4-laptop2x.jpg 2x">
-                        <source srcset="./img/team/stuff-4-1x.jpg 1x, ./img/team/stuff-4-2x.jpg 2x">
+                        <source media="(max-width: 767px)"
+                            srcset="./img/team/stuff-4-1x.jpg 1x, ./img/team/stuff-4-2x.jpg 2x">
                         <img class="stuff-list__img" src="#" alt="Человек">
                     </picture>
                     <h4 class="stuff-list__heading">Михаил Ермаков</h4>
@@ -301,10 +357,9 @@
                 </li>
             </ul>
             </div>
-        </section>
-
+        </section>  
         <!-- Наши клиенты OUR CLIENTS -->
-        <!-- <section class="our-clients">
+        <section class="our-clients">
             <div class="container">
                 <h2 class="heading our-clients__heading">Постоянные клиенты</h2>
                 <ul class="our-clients-list">
@@ -352,10 +407,10 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
-    </main>  
+        </section> 
+    </main>   
     <!-- Footer -->
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
         <ul class="footer-list">
             <li class="footer-list__item list">
@@ -399,7 +454,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="footer__form-position">
+            <div class="footer__form-position">
                 <ul class="">
                     <li class="footer__form-paragraph list">
                         <p class="">Подпишитесь на рассылку</p>
@@ -420,12 +475,11 @@
                         </form>
                     </li>
                 </ul>
-            </li>
+            </div>
         </ul>
         </div>
-    </footer> -->
-    <!-- BACKDROP -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    </footer> 
+    <div class="backdrop is-hidden" data-modal>
         <div class="backdrop__button">
             <button type="button" class="backdrop__button-style" data-modal-close>
                 <svg class="backdrop__button-svg"> 
@@ -480,6 +534,7 @@
             </form>
         </div>
     </div>
-    <script src="./js/modal.js"></script>  -->
+    <script src="./js/modal.js"></script> 
+    <script src="js/menu.js"></script>
 </body>
 </html>

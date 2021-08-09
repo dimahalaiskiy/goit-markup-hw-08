@@ -1,5 +1,4 @@
 .container-hero {
-    width: 100%;
     margin: 0 auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/bg/bg.png);
     @include retina(('../img/bg/bg-2x.png'), 0px);

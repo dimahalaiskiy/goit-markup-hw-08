@@ -1,6 +1,12 @@
 .stuff {
     background-color: #F5F4FA;
     padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.stuff-list {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .stuff__heading {
@@ -11,8 +17,9 @@
 }
 
 .stuff-list__img {
-    margin: 0 auto;
-    height: 460px;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .stuff-list__item {
@@ -21,7 +28,6 @@
 
 .stuff-list__border {
     margin: 0;
-    display: inline-block;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -50,57 +56,33 @@
 
 @media screen and (min-width: 768px) {
 
-.stuff-list {
-    display: flex;
-    flex-wrap: wrap;
+    .stuff-list {
+        width: 768px;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 354px);
+        width: 768px;
+    }
+
 }
 
-.stuff-list__img {
-    margin: 0 auto;
-    height: 374px;
+@media screen and (min-width: 1200px) {
+    .stuff-list {
+        width: 1200px;
+        display: flex;
+    }
+
+    .stuff-list__img {
+        display: block;
+        width: 270px;
+        height: 260px;
+    }
+
+    .stuff-list__item {
+        margin-top: 50px;
+    }
+    .stuff {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
-}
-
-
-
-
-
-// .stuff-list {
-//     margin-top: 40px;
-//     margin-left: -30px;
-//     display: flex;
-//     flex-wrap: wrap;
-//     padding-bottom: 94px;
-// }
-
-// .stuff-list__item {
-//     margin-left: 30px;
-// }
-
-// .stuff-list__border {
-//     margin: 0;
-//     background: #FFFFFF;
-//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-//     border-radius: 0px 0px 4px 4px;
-// }
-
-// .stuff-list__heading {
-//     margin-top: 20px;
-//     text-align: center;
-//     @include font(16px, 500, 19px);
-//     letter-spacing: 0.03em;
-//     color: var(--main-color);
-// }
-
-// .stuff-list__paragraph {
-//     margin-top: 10px;
-//     @include font(16px, 400, 19px);
-//     text-align: center;
-//     letter-spacing: 0.03em;
-//     color: var(--paragraph-color);
-// }
-
-// .stuff__icon-list {
-//     margin-top: 16px;
-//     padding-bottom: 24px;
-// }

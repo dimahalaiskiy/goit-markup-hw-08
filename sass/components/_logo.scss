@@ -1,9 +1,15 @@
 .logo {
     font-family: 'Raleway', sans-serif;
-    @include font(26px, 700, 31px);
+    @include font(24px, 700, 28px);
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--main-color);
+}
+
+@media screen and (min-width: 1200px) {
+    .logo {
+        @include font(26px, 700, 31px);
+    }
 }
 
 .logo__theme-blue {
