@@ -76,6 +76,14 @@
     right: 15px;
 }
 
+.nav-mobile {
+    margin-top: -32px;
+    &__item {
+        margin-top: 32px;
+    }
+}
+
+
 .mobile-menu__svg {
     width: 20px;
     height: 20px;
@@ -127,7 +135,7 @@
 }
 
 .nav-mobile__position {
-    margin-top: 80%;
+    margin-top: 40%;
 }
 
 .mobile-menu-social__item:not(:first-child){
